@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */; };
+		C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDF2A90925300EE6557 /* ContentView.swift */; };
+		C9EE2EE22A90925400EE6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EE2EE12A90925400EE6557 /* Assets.xcassets */; };
+		C9EE2EE52A90925400EE6557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EE2EE42A90925400EE6557 /* Preview Assets.xcassets */; };
+		C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */; };
+		C9EE2EEE2A9093DB00EE6557 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EED2A9093DB00EE6557 /* SettingView.swift */; };
+		C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */; };
+		C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */; };
+		C9EE2EF52A909EB200EE6557 /* CrossFit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */; };
+		C9EE2EF72A90F15200EE6557 /* CrossFitDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */; };
+		C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */; };
+		C9FF51962A9123BB005FC3F6 /* lightweight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9FF51952A9123BB005FC3F6 /* lightweight.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9EE2EDA2A90925300EE6557 /* OneRMRecordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRMRecordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMRecordAppApp.swift; sourceTree = "<group>"; };
+		C9EE2EDF2A90925300EE6557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9EE2EE12A90925400EE6557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9EE2EE42A90925400EE6557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMView.swift; sourceTree = "<group>"; };
+		C9EE2EED2A9093DB00EE6557 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		C9EE2EF02A909D2800EE6557 /* HealthData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthData.xcdatamodel; sourceTree = "<group>"; };
+		C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossFitDataModel.swift; sourceTree = "<group>"; };
+		C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C9FF51952A9123BB005FC3F6 /* lightweight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight.mp3; sourceTree = "<group>"; };
+		C9FF51972A9129FB005FC3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9EE2ED72A90925300EE6557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9EE2ED12A90925300EE6557 = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EDC2A90925300EE6557 /* OneRMRecordApp */,
+				C9EE2EDB2A90925300EE6557 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9EE2EDB2A90925300EE6557 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EDA2A90925300EE6557 /* OneRMRecordApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9EE2EDC2A90925300EE6557 /* OneRMRecordApp */ = {
+			isa = PBXGroup;
+			children = (
+				C9FF51972A9129FB005FC3F6 /* Info.plist */,
+				C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */,
+				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
+				C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */,
+				C9EE2EED2A9093DB00EE6557 /* SettingView.swift */,
+				C9EE2EE12A90925400EE6557 /* Assets.xcassets */,
+				C9EE2EE32A90925400EE6557 /* Preview Content */,
+				C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */,
+				C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */,
+				C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */,
+				C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */,
+				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
+				C9FF51952A9123BB005FC3F6 /* lightweight.mp3 */,
+			);
+			path = OneRMRecordApp;
+			sourceTree = "<group>";
+		};
+		C9EE2EE32A90925400EE6557 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EE42A90925400EE6557 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9EE2ED92A90925300EE6557 /* OneRMRecordApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EE2EE82A90925400EE6557 /* Build configuration list for PBXNativeTarget "OneRMRecordApp" */;
+			buildPhases = (
+				C9EE2ED62A90925300EE6557 /* Sources */,
+				C9EE2ED72A90925300EE6557 /* Frameworks */,
+				C9EE2ED82A90925300EE6557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneRMRecordApp;
+			productName = OneRMRecordApp;
+			productReference = C9EE2EDA2A90925300EE6557 /* OneRMRecordApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9EE2ED22A90925300EE6557 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C9EE2ED92A90925300EE6557 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = C9EE2ED52A90925300EE6557 /* Build configuration list for PBXProject "OneRMRecordApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9EE2ED12A90925300EE6557;
+			productRefGroup = C9EE2EDB2A90925300EE6557 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9EE2ED92A90925300EE6557 /* OneRMRecordApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9EE2ED82A90925300EE6557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EE2EE52A90925400EE6557 /* Preview Assets.xcassets in Resources */,
+				C9FF51962A9123BB005FC3F6 /* lightweight.mp3 in Resources */,
+				C9EE2EE22A90925400EE6557 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9EE2ED62A90925300EE6557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EE2EF52A909EB200EE6557 /* CrossFit+CoreDataProperties.swift in Sources */,
+				C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */,
+				C9EE2EF72A90F15200EE6557 /* CrossFitDataModel.swift in Sources */,
+				C9EE2EEE2A9093DB00EE6557 /* SettingView.swift in Sources */,
+				C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */,
+				C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */,
+				C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */,
+				C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */,
+				C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C9EE2EE62A90925400EE6557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9EE2EE72A90925400EE6557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9EE2EE92A90925400EE6557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OneRMRecordApp/Preview Content\"";
+				DEVELOPMENT_TEAM = UULN4L9KLP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneRMRecordApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "삼최몇";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dh.OneRMRecordApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C9EE2EEA2A90925400EE6557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OneRMRecordApp/Preview Content\"";
+				DEVELOPMENT_TEAM = UULN4L9KLP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneRMRecordApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "삼최몇";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dh.OneRMRecordApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9EE2ED52A90925300EE6557 /* Build configuration list for PBXProject "OneRMRecordApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EE2EE62A90925400EE6557 /* Debug */,
+				C9EE2EE72A90925400EE6557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EE2EE82A90925400EE6557 /* Build configuration list for PBXNativeTarget "OneRMRecordApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EE2EE92A90925400EE6557 /* Debug */,
+				C9EE2EEA2A90925400EE6557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9EE2EF02A909D2800EE6557 /* HealthData.xcdatamodel */,
+			);
+			currentVersion = C9EE2EF02A909D2800EE6557 /* HealthData.xcdatamodel */;
+			path = HealthData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C9EE2ED22A90925300EE6557 /* Project object */;
+}
