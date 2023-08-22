@@ -9,20 +9,22 @@ import Foundation
 import SwiftUI
 
 class CrossFitDataModel: ObservableObject {
+    final let workoutName = ["데드리프트", "백스쿼트", "벤치프레스", "클린 앤 저크", "스내치", "프론트 스쿼트", "오버헤드 스쿼트", "런지", "숄더프레스"]
     static let shared = CrossFitDataModel()
     private let coreDataManager = CoreDataManager.shared
     private final let entityName = "CrossFit"
-    @Published var backSquat = 0
-    @Published var benchPress = 0
-    @Published var cleanAndJerk = 0
-    @Published var deadlift = 0
-    @Published var frontSquat = 0
-    @Published var lunge = 0
-    @Published var overheadSquat = 0
-    @Published var shoulderPress = 0
-    @Published var snatch = 0
+//    @Published var backSquat = 0
+//    @Published var benchPress = 0
+//    @Published var cleanAndJerk = 0
+//    @Published var deadlift = 0
+//    @Published var frontSquat = 0
+//    @Published var lunge = 0
+//    @Published var overheadSquat = 0
+//    @Published var shoulderPress = 0
+//    @Published var snatch = 0
+    @Published var workoutDataArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
-    private init() {
+    init() {
         fetchCrossFitData()
     }
     
@@ -34,15 +36,26 @@ class CrossFitDataModel: ObservableObject {
             return
         }
         
-        backSquat = Int(crossFitData.backSquat)
-        benchPress = Int(crossFitData.benchPress)
-        cleanAndJerk = Int(crossFitData.cleanAndJerk)
-        deadlift = Int(crossFitData.deadlift)
-        frontSquat = Int(crossFitData.frontSquat)
-        lunge = Int(crossFitData.lunge)
-        overheadSquat = Int(crossFitData.overheadSquat)
-        shoulderPress = Int(crossFitData.shoulderPress)
-        snatch = Int(crossFitData.snatch)
+//        backSquat = Int(crossFitData.backSquat)
+//        benchPress = Int(crossFitData.benchPress)
+//        cleanAndJerk = Int(crossFitData.cleanAndJerk)
+//        deadlift = Int(crossFitData.deadlift)
+//        frontSquat = Int(crossFitData.frontSquat)
+//        lunge = Int(crossFitData.lunge)
+//        overheadSquat = Int(crossFitData.overheadSquat)
+//        shoulderPress = Int(crossFitData.shoulderPress)
+//        snatch = Int(crossFitData.snatch)
+//        
+        workoutDataArray[0] = Int(crossFitData.deadlift)
+        workoutDataArray[1] = Int(crossFitData.backSquat)
+        workoutDataArray[2] = Int(crossFitData.benchPress)
+        workoutDataArray[3] = Int(crossFitData.cleanAndJerk)
+        workoutDataArray[4] = Int(crossFitData.snatch)
+        workoutDataArray[5] = Int(crossFitData.frontSquat)
+        workoutDataArray[6] = Int(crossFitData.overheadSquat)
+        workoutDataArray[7] = Int(crossFitData.lunge)
+        workoutDataArray[8] = Int(crossFitData.shoulderPress)
+        
     }
     
     func saveCrossFitData() {
@@ -59,21 +72,32 @@ class CrossFitDataModel: ObservableObject {
             return
         }
         
-        crossFit.backSquat = Int16(backSquat)
-        crossFit.benchPress = Int16(benchPress)
-        crossFit.cleanAndJerk = Int16(cleanAndJerk)
-        crossFit.deadlift = Int16(deadlift)
-        crossFit.frontSquat = Int16(frontSquat)
-        crossFit.lunge = Int16(lunge)
-        crossFit.overheadSquat = Int16(overheadSquat)
-        crossFit.shoulderPress = Int16(shoulderPress)
-        crossFit.snatch = Int16(snatch)
+//        crossFit.backSquat = Int16(backSquat)
+//        crossFit.benchPress = Int16(benchPress)
+//        crossFit.cleanAndJerk = Int16(cleanAndJerk)
+//        crossFit.deadlift = Int16(deadlift)
+//        crossFit.frontSquat = Int16(frontSquat)
+//        crossFit.lunge = Int16(lunge)
+//        crossFit.overheadSquat = Int16(overheadSquat)
+//        crossFit.shoulderPress = Int16(shoulderPress)
+//        crossFit.snatch = Int16(snatch)
         
+        crossFit.backSquat = Int16(workoutDataArray[1])
+        crossFit.benchPress = Int16(workoutDataArray[2])
+        crossFit.cleanAndJerk = Int16(workoutDataArray[3])
+        crossFit.deadlift = Int16(workoutDataArray[0])
+        crossFit.frontSquat = Int16(workoutDataArray[5])
+        crossFit.lunge = Int16(workoutDataArray[7])
+        crossFit.overheadSquat = Int16(workoutDataArray[6])
+        crossFit.shoulderPress = Int16(workoutDataArray[8])
+        crossFit.snatch = Int16(workoutDataArray[4])
+        
+                
         coreDataManager.update(object: crossFit)
     }
     
     func threeWorkoutTotal() -> Int {
-        return backSquat + benchPress + deadlift
+        return workoutDataArray[0] + workoutDataArray[1] + workoutDataArray[2]
     }
     
 }
