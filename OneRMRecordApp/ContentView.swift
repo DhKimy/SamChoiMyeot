@@ -15,28 +15,28 @@ enum Tab {
 
 
 struct MyToggleStyle: ToggleStyle {
-  private let width = 60.0
-  
-  func makeBody(configuration: Configuration) -> some View {
-    VStack {
-      configuration.label
+    private let width = 60.0
+    
+    func makeBody(configuration: Configuration) -> some View {
+        VStack {
+            configuration.label
             
-        ZStack(alignment: configuration.isOn ? .trailing : .leading) {
-        RoundedRectangle(cornerRadius: 20)
-          .frame(width: width, height: width / 2)
-          .foregroundColor(configuration.isOn ? .green : .gray)
-        
-        RoundedRectangle(cornerRadius: 20)
-          .frame(width: (width / 2) - 4, height: width / 2 - 6)
-          .foregroundColor(.white)
-          .onTapGesture {
-            withAnimation {
-              configuration.$isOn.wrappedValue.toggle()
+            ZStack(alignment: configuration.isOn ? .trailing : .leading) {
+                RoundedRectangle(cornerRadius: 20)
+                    .frame(width: width, height: width / 2)
+                    .foregroundColor(configuration.isOn ? .green : .gray)
+                
+                RoundedRectangle(cornerRadius: 20)
+                    .frame(width: (width / 2) - 4, height: width / 2 - 6)
+                    .foregroundColor(.white)
+                    .onTapGesture {
+                        withAnimation {
+                            configuration.$isOn.wrappedValue.toggle()
+                        }
+                    }
             }
-          }
-      }
+        }
     }
-  }
 }
 
 struct ContentView: View {
@@ -71,7 +71,7 @@ struct ContentView: View {
                             .font(.system(size: 20, weight: .semibold))
                             .padding(.bottom, 5)
                         
-                        Text("\(crossFitDataModel.threeWorkoutTotal()) kg")
+                        Text(isPound ? "\(Double(crossFitDataModel.threeWorkoutTotal()) * 2.2, specifier: "%.0f") lb" : "\(crossFitDataModel.threeWorkoutTotal()) kg" )
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.system(size: 20, weight: .bold))
                             .padding(.bottom, 20)

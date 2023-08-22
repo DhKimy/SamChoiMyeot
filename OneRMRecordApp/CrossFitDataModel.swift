@@ -38,6 +38,33 @@ class CrossFitDataModel: ObservableObject {
         workoutDataArray[8] = Int(crossFitData.shoulderPress)
         
     }
+    func saveCrossFitData(isPound: Bool = false) {
+        var crossFitData: CrossFit?
+        let fetchResult = coreDataManager.fetch(entityName: entityName)
+        if let existingCrossFitData = fetchResult.first as? CrossFit {
+            crossFitData = existingCrossFitData
+        } else if let newCrossFitData = coreDataManager.create(entityName: entityName, attributes: [:]) as? CrossFit {
+            crossFitData = newCrossFitData
+        }
+        
+        guard let crossFit = crossFitData else {
+            print("Failed to create or find UserData")
+            return
+        }
+        
+        crossFit.backSquat = Int16(workoutDataArray[1])
+        crossFit.benchPress = Int16(workoutDataArray[2])
+        crossFit.cleanAndJerk = Int16(workoutDataArray[3])
+        crossFit.deadlift = Int16(workoutDataArray[0])
+        crossFit.frontSquat = Int16(workoutDataArray[5])
+        crossFit.lunge = Int16(workoutDataArray[7])
+        crossFit.overheadSquat = Int16(workoutDataArray[6])
+        crossFit.shoulderPress = Int16(workoutDataArray[8])
+        crossFit.snatch = Int16(workoutDataArray[4])
+        
+                
+        coreDataManager.update(object: crossFit)
+    }
     
     func saveCrossFitData() {
         var crossFitData: CrossFit?
