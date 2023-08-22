@@ -10,6 +10,7 @@ import SwiftUI
 struct WorkoutRow: View {
     @ObservedObject var crossFitDataModel: CrossFitDataModel
     @State var rowNumber: Int
+    @Binding var isPound: Bool
     
     var body: some View {
         VStack(spacing: 0) {
@@ -42,8 +43,8 @@ struct WorkoutRow: View {
 struct WorkoutRow_Previews: PreviewProvider {
     @ObservedObject static var crossFitDataModel = CrossFitDataModel()
     @State static var rowNumber = 0
-    
+    @State static var isPound = false
     static var previews: some View {
-        WorkoutRow(crossFitDataModel: crossFitDataModel, rowNumber: 0)
+        WorkoutRow(crossFitDataModel: crossFitDataModel, rowNumber: 0, isPound: $isPound)
     }
 }
