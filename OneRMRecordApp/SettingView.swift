@@ -12,6 +12,7 @@ struct CalculatorView: View {
     @State var count = ""
     @State var resultWeight = 0.0
     @State private var isKeyboardShown = false
+    @Binding var isPound: Bool
     
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct CalculatorView: View {
                         .tint(.white)
                         .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
                         .textContentType(.oneTimeCode) // 숫자만 입력 받도록 설정
-                    Text("kg")
+                    Text(isPound ? "lb" : "kg")
                         .padding(.trailing, 30)
                     Spacer()
                 }
@@ -88,7 +89,7 @@ struct CalculatorView: View {
             VStack(spacing: 10) {
                 Text(resultWeight != 0 ? "당신의 1RM은" : "")
                     .font(.system(size: 18, weight: .semibold))
-                Text(resultWeight != 0 ? "\(resultWeight, specifier: "%.2f")kg" : "")
+                Text(resultWeight != 0 ? "\(Int(resultWeight)) \(isPound ? "lb" : "kg")" : "")
                     .font(.system(size: 20, weight: .black))
                 Text(resultWeight != 0 ? "입니다." : "")
                     .font(.system(size: 18, weight: .semibold))
@@ -106,16 +107,22 @@ struct CalculatorView: View {
     }
         
     
+    
+}
+
+struct CalculatorView_Priviewer: PreviewProvider {
+    @State static var isPound = true
+    
+    static var previews: some View {
+        CalculatorView(isPound: $isPound)
+    }
+}
+
+extension CalculatorView {
     private func calculate1RM() {
         let weight = Int(self.weight)
         let count = Int(self.count)
         
         self.resultWeight = Double(weight!) * (1 + (0.033 * Double(count!)))
-    }
-}
-
-struct CalculatorView_Priviewer: PreviewProvider {
-    static var previews: some View {
-        CalculatorView()
     }
 }
