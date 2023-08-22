@@ -19,6 +19,18 @@ class CrossFitDataModel: ObservableObject {
         fetchCrossFitData()
     }
     
+    func changeWeightStandard(isFound: Bool) {
+        if isFound {
+            for (index, i) in workoutDataArray.enumerated() {
+                workoutDataArray[index] = Int(Double(i) * 2.5)
+            }
+        } else {
+            for (index, i) in workoutDataArray.enumerated() {
+                workoutDataArray[index] = Int(Double(i) * 0.4)
+            }
+        }
+    }
+    
     func fetchCrossFitData() {
         let fetchResult = coreDataManager.fetch(entityName: entityName)
         

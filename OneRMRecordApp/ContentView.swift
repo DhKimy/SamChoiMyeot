@@ -65,13 +65,14 @@ struct ContentView: View {
                     .toggleStyle(MyToggleStyle())
                     .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 4, alignment: .bottomTrailing)
                     
+                    
                     VStack(spacing: 0) {
                         Text("나의 삼대 중량")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.system(size: 20, weight: .semibold))
                             .padding(.bottom, 5)
                         
-                        Text(isPound ? "\(Double(crossFitDataModel.threeWorkoutTotal()) * 2.2, specifier: "%.0f") lb" : "\(crossFitDataModel.threeWorkoutTotal()) kg" )
+                        Text("\(crossFitDataModel.threeWorkoutTotal()) \(isPound ? "lb" : "kg")")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.system(size: 20, weight: .bold))
                             .padding(.bottom, 20)
@@ -110,7 +111,7 @@ struct ContentView: View {
                     }
                     .tag(Tab.first)
                 
-                CalculatorView()
+                CalculatorView(isPound: $isPound)
                     .tabItem {
                         VStack(spacing: 0) {
                             Image(systemName: "pencil")
@@ -120,6 +121,9 @@ struct ContentView: View {
                     .tag(Tab.second)
             }
             .accentColor(.green)
+        }
+        .onChange(of: isPound) { newValue in
+            crossFitDataModel.changeWeightStandard(isFound: newValue)
         }
     }
 }

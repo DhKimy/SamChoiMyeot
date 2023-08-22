@@ -23,6 +23,11 @@ struct OneRMView: View {
                     .padding(.bottom, 150)
                 }
                 .scrollIndicators(.hidden)
+                Rectangle()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 110)
+                    .foregroundColor(Color.black.opacity(0.6))
+                    .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
                 Button(action: {
                     crossFitDataModel.saveCrossFitData()
                 }) {
@@ -34,12 +39,13 @@ struct OneRMView: View {
                             .foregroundColor(.white)
                             .fontWeight(.black)
                     }
-                    .frame(maxWidth: UIScreen.main.bounds.width / 2.5)
+                    .frame(maxWidth: UIScreen.main.bounds.width)
                     .frame(height: 50)
                     .cornerRadius(20)
+                    .padding(.horizontal, 20)
                 }
                 .padding(.trailing, 10)
-                .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2.5)
+                .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2.25)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

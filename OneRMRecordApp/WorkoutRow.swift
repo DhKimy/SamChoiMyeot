@@ -19,25 +19,20 @@ struct WorkoutRow: View {
                     .frame(maxWidth: 120, alignment: .leading)
                     .fontWeight(.black)
                 Spacer()
-                TextField("\(isPound ? Int(Double(crossFitDataModel.workoutDataArray[rowNumber]) * 2.2) : crossFitDataModel.workoutDataArray[rowNumber])", text: Binding(
+                Text("약")
+                TextField("\(crossFitDataModel.workoutDataArray[rowNumber])", text: Binding(
                     get: {
-                        if isPound {
-                            return "\(Int(Double(crossFitDataModel.workoutDataArray[rowNumber]) * 2.2))"
-                        } else {
-                            return "\(crossFitDataModel.workoutDataArray[rowNumber])"
-                        }
+                        "\(crossFitDataModel.workoutDataArray[rowNumber])"
+                        
                     },
                     set: { newValue in
-                        if isPound {
-                            crossFitDataModel.workoutDataArray[rowNumber] = Int((Double(newValue) ?? 0) * 0.45)
-                        } else {
                             crossFitDataModel.workoutDataArray[rowNumber] = Int(newValue) ?? 0
-                        }
                     }
                 ))
                 .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
                 .textContentType(.oneTimeCode) // 숫자만 입력 받도록 설정
-                .padding(.leading, 26)
+                .frame(maxWidth: 70)
+                .padding(.leading, 10)
                 Text(isPound ? "lb" : "kg")
                     .padding(.trailing, 30)
             }
