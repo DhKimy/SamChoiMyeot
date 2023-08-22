@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 class CrossFitDataModel: ObservableObject {
-    final let workoutName = ["데드리프트", "백스쿼트", "벤치프레스", "클린 앤 저크", "스내치", "프론트 스쿼트", "오버헤드 스쿼트", "런지", "숄더프레스"]
     static let shared = CrossFitDataModel()
     private let coreDataManager = CoreDataManager.shared
     private final let entityName = "CrossFit"
@@ -27,7 +26,7 @@ class CrossFitDataModel: ObservableObject {
             print("크로스핏 데이터를 불러오는데 실패했습니다.")
             return
         }
-        
+
         workoutDataArray[0] = Int(crossFitData.deadlift)
         workoutDataArray[1] = Int(crossFitData.backSquat)
         workoutDataArray[2] = Int(crossFitData.benchPress)

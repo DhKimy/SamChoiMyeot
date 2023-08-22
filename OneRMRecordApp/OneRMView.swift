@@ -52,7 +52,7 @@ struct OneRMView: View {
                     .padding(.horizontal, 26)
                     .padding(.bottom, 30)
                     
-                    ForEach(0 ..< 8) { index in
+                    ForEach(Array(WorkoutName.allCases).indices, id:\.self) { index in
                         WorkoutRow(crossFitDataModel: crossFitDataModel, rowNumber: index)
                     }
                 }

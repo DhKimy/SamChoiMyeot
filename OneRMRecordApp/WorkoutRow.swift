@@ -14,7 +14,7 @@ struct WorkoutRow: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
-                Text(crossFitDataModel.workoutName[rowNumber])
+                Text(WorkoutName.allCases[rowNumber].description)
                     .frame(maxWidth: 120, alignment: .leading)
                     .fontWeight(.black)
                 Spacer()
