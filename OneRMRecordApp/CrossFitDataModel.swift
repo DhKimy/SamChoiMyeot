@@ -13,15 +13,7 @@ class CrossFitDataModel: ObservableObject {
     static let shared = CrossFitDataModel()
     private let coreDataManager = CoreDataManager.shared
     private final let entityName = "CrossFit"
-//    @Published var backSquat = 0
-//    @Published var benchPress = 0
-//    @Published var cleanAndJerk = 0
-//    @Published var deadlift = 0
-//    @Published var frontSquat = 0
-//    @Published var lunge = 0
-//    @Published var overheadSquat = 0
-//    @Published var shoulderPress = 0
-//    @Published var snatch = 0
+    
     @Published var workoutDataArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     init() {
@@ -36,16 +28,6 @@ class CrossFitDataModel: ObservableObject {
             return
         }
         
-//        backSquat = Int(crossFitData.backSquat)
-//        benchPress = Int(crossFitData.benchPress)
-//        cleanAndJerk = Int(crossFitData.cleanAndJerk)
-//        deadlift = Int(crossFitData.deadlift)
-//        frontSquat = Int(crossFitData.frontSquat)
-//        lunge = Int(crossFitData.lunge)
-//        overheadSquat = Int(crossFitData.overheadSquat)
-//        shoulderPress = Int(crossFitData.shoulderPress)
-//        snatch = Int(crossFitData.snatch)
-//        
         workoutDataArray[0] = Int(crossFitData.deadlift)
         workoutDataArray[1] = Int(crossFitData.backSquat)
         workoutDataArray[2] = Int(crossFitData.benchPress)
@@ -71,16 +53,6 @@ class CrossFitDataModel: ObservableObject {
             print("Failed to create or find UserData")
             return
         }
-        
-//        crossFit.backSquat = Int16(backSquat)
-//        crossFit.benchPress = Int16(benchPress)
-//        crossFit.cleanAndJerk = Int16(cleanAndJerk)
-//        crossFit.deadlift = Int16(deadlift)
-//        crossFit.frontSquat = Int16(frontSquat)
-//        crossFit.lunge = Int16(lunge)
-//        crossFit.overheadSquat = Int16(overheadSquat)
-//        crossFit.shoulderPress = Int16(shoulderPress)
-//        crossFit.snatch = Int16(snatch)
         
         crossFit.backSquat = Int16(workoutDataArray[1])
         crossFit.benchPress = Int16(workoutDataArray[2])
