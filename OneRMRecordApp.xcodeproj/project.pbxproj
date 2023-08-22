@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90400512A94374B00803EFE /* WorkoutRow.swift */; };
 		C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */; };
 		C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDF2A90925300EE6557 /* ContentView.swift */; };
 		C9EE2EE22A90925400EE6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EE2EE12A90925400EE6557 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90400512A94374B00803EFE /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
 		C9EE2EDA2A90925300EE6557 /* OneRMRecordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRMRecordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMRecordAppApp.swift; sourceTree = "<group>"; };
 		C9EE2EDF2A90925300EE6557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */,
 				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
 				C9FF51952A9123BB005FC3F6 /* lightweight.mp3 */,
+				C90400512A94374B00803EFE /* WorkoutRow.swift */,
 			);
 			path = OneRMRecordApp;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				C9EE2EEE2A9093DB00EE6557 /* SettingView.swift in Sources */,
 				C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */,
 				C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */,
+				C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */,
 				C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */,
 				C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */,
 				C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */,
