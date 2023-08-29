@@ -26,7 +26,9 @@ struct WorkoutRow: View {
                         
                     },
                     set: { newValue in
-                            crossFitDataModel.workoutDataArray[rowNumber] = Int(newValue) ?? 0
+                        if let newValue = Int(newValue), newValue <= 1000 {
+                            crossFitDataModel.workoutDataArray[rowNumber] = Int(newValue)
+                        }
                     }
                 ))
                 .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
