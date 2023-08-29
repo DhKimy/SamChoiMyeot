@@ -15,7 +15,7 @@
 		C9EE2EE22A90925400EE6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EE2EE12A90925400EE6557 /* Assets.xcassets */; };
 		C9EE2EE52A90925400EE6557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EE2EE42A90925400EE6557 /* Preview Assets.xcassets */; };
 		C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */; };
-		C9EE2EEE2A9093DB00EE6557 /* CalculatorView in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EED2A9093DB00EE6557 /* CalculatorView */; };
+		C9EE2EEE2A9093DB00EE6557 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */; };
 		C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */; };
 		C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */; };
 		C9EE2EF52A909EB200EE6557 /* CrossFit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */; };
@@ -34,7 +34,7 @@
 		C9EE2EE12A90925400EE6557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9EE2EE42A90925400EE6557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMView.swift; sourceTree = "<group>"; };
-		C9EE2EED2A9093DB00EE6557 /* CalculatorView */ = {isa = PBXFileReference; lastKnownFileType = text; path = CalculatorView; sourceTree = "<group>"; };
+		C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		C9EE2EF02A909D2800EE6557 /* HealthData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthData.xcdatamodel; sourceTree = "<group>"; };
 		C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */,
 				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
 				C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */,
-				C9EE2EED2A9093DB00EE6557 /* CalculatorView */,
+				C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */,
 				C9EE2EE12A90925400EE6557 /* Assets.xcassets */,
 				C9EE2EE32A90925400EE6557 /* Preview Content */,
 				C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */,
@@ -186,7 +186,7 @@
 				C9EE2EF52A909EB200EE6557 /* CrossFit+CoreDataProperties.swift in Sources */,
 				C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */,
 				C9EE2EF72A90F15200EE6557 /* CrossFitDataModel.swift in Sources */,
-				C9EE2EEE2A9093DB00EE6557 /* CalculatorView in Sources */,
+				C9EE2EEE2A9093DB00EE6557 /* CalculatorView.swift in Sources */,
 				C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */,
 				C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */,
 				C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */,
