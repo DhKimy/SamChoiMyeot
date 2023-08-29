@@ -83,7 +83,7 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 3.5, alignment: .bottomLeading)
                         
                         Button(action: {
-                            playSound(fileName: "lightweight_\(Int.random(in: 1 ... 2))", fileType: "mp3")
+                            playSound(fileName: "lightweight_\(Int.random(in: 1 ... 4))", fileType: "mp3")
                         }) {
                             ZStack {
                                 Rectangle()

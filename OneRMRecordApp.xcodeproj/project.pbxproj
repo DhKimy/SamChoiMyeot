@@ -13,6 +13,8 @@
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
 		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
 		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
+		C9CE943D2A9E40200037BFFF /* lightweight_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9CE943C2A9E40200037BFFF /* lightweight_3.mp3 */; };
+		C9CE943F2A9E42410037BFFF /* lightweight_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9CE943E2A9E42410037BFFF /* lightweight_4.mp3 */; };
 		C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */; };
 		C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDF2A90925300EE6557 /* ContentView.swift */; };
 		C9EE2EE22A90925400EE6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EE2EE12A90925400EE6557 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C9CE943C2A9E40200037BFFF /* lightweight_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_3.mp3; sourceTree = "<group>"; };
+		C9CE943E2A9E42410037BFFF /* lightweight_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_4.mp3; sourceTree = "<group>"; };
 		C9EE2EDA2A90925300EE6557 /* OneRMRecordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRMRecordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMRecordAppApp.swift; sourceTree = "<group>"; };
 		C9EE2EDF2A90925300EE6557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 			children = (
 				C9FF51952A9123BB005FC3F6 /* lightweight_1.mp3 */,
 				C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */,
+				C9CE943C2A9E40200037BFFF /* lightweight_3.mp3 */,
+				C9CE943E2A9E42410037BFFF /* lightweight_4.mp3 */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -241,7 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CE943F2A9E42410037BFFF /* lightweight_4.mp3 in Resources */,
 				C95DC4712A948C5200649FF7 /* lightweight_2.mp3 in Resources */,
+				C9CE943D2A9E40200037BFFF /* lightweight_3.mp3 in Resources */,
 				C9EE2EE52A90925400EE6557 /* Preview Assets.xcassets in Resources */,
 				C9FF51962A9123BB005FC3F6 /* lightweight_1.mp3 in Resources */,
 				C9EE2EE22A90925400EE6557 /* Assets.xcassets in Resources */,
