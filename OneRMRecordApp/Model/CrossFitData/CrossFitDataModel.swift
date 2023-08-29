@@ -106,6 +106,33 @@ class CrossFitDataModel: ObservableObject {
         coreDataManager.update(object: crossFit)
     }
     
+    func checkDifferenceData() -> Bool {
+        let fetchResult = coreDataManager.fetch(entityName: entityName)
+        var checkArray = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        guard let crossFitData = fetchResult.first as? CrossFit else {
+            print("크로스핏 데이터를 불러오는데 실패했습니다.")
+            return false
+        }
+
+        checkArray[0] = Int(crossFitData.deadlift)
+        checkArray[1] = Int(crossFitData.backSquat)
+        checkArray[2] = Int(crossFitData.benchPress)
+        checkArray[3] = Int(crossFitData.cleanAndJerk)
+        checkArray[4] = Int(crossFitData.snatch)
+        checkArray[5] = Int(crossFitData.frontSquat)
+        checkArray[6] = Int(crossFitData.overheadSquat)
+        checkArray[7] = Int(crossFitData.lunge)
+        checkArray[8] = Int(crossFitData.shoulderPress)
+
+        for (index, i) in checkArray.enumerated() {
+            if i < workoutDataArray[index] {
+                return true
+            }
+        }
+
+        return false
+    }
+    
     func threeWorkoutTotal() -> Int {
         return workoutDataArray[0] + workoutDataArray[1] + workoutDataArray[2]
     }
