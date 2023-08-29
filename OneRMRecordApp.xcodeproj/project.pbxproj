@@ -70,6 +70,80 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		C9CE94342A9E071C0037BFFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
+				C9CE943B2A9E07EB0037BFFF /* EmitterView */,
+				C9CE94392A9E07C00037BFFF /* OneRMView */,
+				C9CE943A2A9E07D60037BFFF /* CalculatorView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9CE94352A9E072F0037BFFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9CE94382A9E07AE0037BFFF /* CrossFitData */,
+				C9CE94372A9E07980037BFFF /* Emitter */,
+				C9CE94362A9E07860037BFFF /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9CE94362A9E07860037BFFF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */,
+				C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */,
+				C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */,
+				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C9CE94372A9E07980037BFFF /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		C9CE94382A9E07AE0037BFFF /* CrossFitData */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */,
+			);
+			path = CrossFitData;
+			sourceTree = "<group>";
+		};
+		C9CE94392A9E07C00037BFFF /* OneRMView */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */,
+				C90400512A94374B00803EFE /* WorkoutRow.swift */,
+				C95DC46B2A94663500649FF7 /* WorkoutName.swift */,
+			);
+			path = OneRMView;
+			sourceTree = "<group>";
+		};
+		C9CE943A2A9E07D60037BFFF /* CalculatorView */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */,
+			);
+			path = CalculatorView;
+			sourceTree = "<group>";
+		};
+		C9CE943B2A9E07EB0037BFFF /* EmitterView */ = {
+			isa = PBXGroup;
+			children = (
+				C9CE942E2A9DCC320037BFFF /* EmitterView.swift */,
+			);
+			path = EmitterView;
+			sourceTree = "<group>";
+		};
 		C9EE2ED12A90925300EE6557 = {
 			isa = PBXGroup;
 			children = (
@@ -89,24 +163,14 @@
 		C9EE2EDC2A90925300EE6557 /* OneRMRecordApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */,
+				C9CE94322A9E057F0037BFFF /* RootView.swift */,
+				C9CE94342A9E071C0037BFFF /* View */,
+				C9CE94352A9E072F0037BFFF /* Model */,
 				C95DC46D2A947DEE00649FF7 /* Resource */,
 				C9FF51972A9129FB005FC3F6 /* Info.plist */,
-				C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */,
-				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
-				C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */,
-				C9CE94322A9E057F0037BFFF /* RootView.swift */,
-				C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */,
 				C9EE2EE12A90925400EE6557 /* Assets.xcassets */,
 				C9EE2EE32A90925400EE6557 /* Preview Content */,
-				C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */,
-				C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */,
-				C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */,
-				C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */,
-				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
-				C90400512A94374B00803EFE /* WorkoutRow.swift */,
-				C95DC46B2A94663500649FF7 /* WorkoutName.swift */,
-				C9CE942E2A9DCC320037BFFF /* EmitterView.swift */,
-				C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */,
 			);
 			path = OneRMRecordApp;
 			sourceTree = "<group>";
