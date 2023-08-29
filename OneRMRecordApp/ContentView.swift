@@ -100,6 +100,9 @@ struct ContentView: View {
             }
             .padding(.horizontal, 26)
             .padding(.vertical, 26)
+            .onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
             
             TabView(selection: $selectedTab) {
                 OneRMView(crossFitDataModel: crossFitDataModel, isPound: $isPound)
@@ -110,7 +113,9 @@ struct ContentView: View {
                         }
                     }
                     .tag(Tab.first)
-                
+                    .onTapGesture {
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }
                 CalculatorView(isPound: $isPound)
                     .tabItem {
                         VStack(spacing: 0) {
@@ -121,6 +126,7 @@ struct ContentView: View {
                     .tag(Tab.second)
             }
             .accentColor(.green)
+            
         }
         .onChange(of: isPound) { newValue in
             crossFitDataModel.changeWeightStandard(isFound: newValue)

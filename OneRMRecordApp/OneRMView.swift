@@ -50,9 +50,7 @@ struct OneRMView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }
+        
     }
     
 }
