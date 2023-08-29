@@ -12,6 +12,7 @@
 		C95DC4712A948C5200649FF7 /* lightweight_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */; };
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
 		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
+		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
 		C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */; };
 		C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EDF2A90925300EE6557 /* ContentView.swift */; };
 		C9EE2EE22A90925400EE6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EE2EE12A90925400EE6557 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_2.mp3; sourceTree = "<group>"; };
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
+		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C9EE2EDA2A90925300EE6557 /* OneRMRecordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRMRecordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMRecordAppApp.swift; sourceTree = "<group>"; };
 		C9EE2EDF2A90925300EE6557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */,
 				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
 				C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */,
+				C9CE94322A9E057F0037BFFF /* RootView.swift */,
 				C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */,
 				C9EE2EE12A90925400EE6557 /* Assets.xcassets */,
 				C9EE2EE32A90925400EE6557 /* Preview Content */,
@@ -192,6 +195,7 @@
 				C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */,
 				C9EE2EF52A909EB200EE6557 /* CrossFit+CoreDataProperties.swift in Sources */,
 				C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */,
+				C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */,
 				C9EE2EF72A90F15200EE6557 /* CrossFitDataModel.swift in Sources */,
 				C9EE2EEE2A9093DB00EE6557 /* CalculatorView.swift in Sources */,
 				C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */,

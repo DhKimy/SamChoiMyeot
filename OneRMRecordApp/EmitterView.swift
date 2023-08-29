@@ -123,3 +123,9 @@ struct EmitterView: UIViewRepresentable {
         return UIScreen.main.bounds
     }
 }
+
+struct EmitterView_Previewer: PreviewProvider {
+    static var previews: some View {
+        EmitterView()
+    }
+}

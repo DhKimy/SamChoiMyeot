@@ -31,6 +31,9 @@ struct OneRMView: View {
                     .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
                 Button(action: {
                     isIncreaseWeight = crossFitDataModel.checkDifferenceData()
+                    if isIncreaseWeight {
+                        emitterOn()
+                    }
                     showAlert = true
                     crossFitDataModel.saveCrossFitData()
                 }) {
@@ -74,6 +77,10 @@ struct OneRMView_Previewer: PreviewProvider {
 }
 
 extension OneRMView {
-    
-    
+    private func emitterOn() {
+        EmitterManager.shared.isEmitterOn = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            EmitterManager.shared.isEmitterOn = false
+        }
+    }
 }
