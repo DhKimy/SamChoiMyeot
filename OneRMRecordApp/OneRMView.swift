@@ -10,7 +10,8 @@ import SwiftUI
 struct OneRMView: View {
     @ObservedObject var crossFitDataModel: CrossFitDataModel
     @Binding var isPound: Bool
-    
+    @State private var showAlert = false
+    @State private var isIncreaseWeight = false
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
@@ -29,6 +30,11 @@ struct OneRMView: View {
                     .foregroundColor(Color.black.opacity(0.6))
                     .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
                 Button(action: {
+                    isIncreaseWeight = crossFitDataModel.checkDifferenceData()
+                    if isIncreaseWeight {
+                        emitterOn()
+                    }
+                    showAlert = true
                     crossFitDataModel.saveCrossFitData()
                 }) {
                     ZStack {
@@ -46,13 +52,18 @@ struct OneRMView: View {
                 }
                 .padding(.trailing, 10)
                 .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2.25)
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("저장"),
+                        message: Text("운동 기록이 저장되었습니다.\(isIncreaseWeight ? "\n증량을 축하합니다!" : "")"),
+                        dismissButton: .default(Text("확인"))
+                    )
+                }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }
+        
     }
     
 }
@@ -66,6 +77,10 @@ struct OneRMView_Previewer: PreviewProvider {
 }
 
 extension OneRMView {
-    
-    
+    private func emitterOn() {
+        EmitterManager.shared.isEmitterOn = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            EmitterManager.shared.isEmitterOn = false
+        }
+    }
 }

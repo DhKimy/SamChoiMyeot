@@ -27,6 +27,11 @@ struct CalculatorView: View {
                         .tint(.white)
                         .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
                         .textContentType(.oneTimeCode) // 숫자만 입력 받도록 설정
+                        .onChange(of: weight) { newValue in
+                            if let number = Int(newValue), number > 1000 {
+                                weight = "1000" // 1000 이상의 값은 1000으로 설정
+                            }
+                        }
                     Text(isPound ? "lb" : "kg")
                         .padding(.trailing, 30)
                     Spacer()
@@ -49,6 +54,11 @@ struct CalculatorView: View {
                         .tint(.white)
                         .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
                         .textContentType(.oneTimeCode) // 숫자만 입력 받도록 설정
+                        .onChange(of: count) { newValue in
+                            if let number = Int(newValue), number > 100 {
+                                count = "100" // 1000 이상의 값은 1000으로 설정
+                            }
+                        }
                     Text("회")
                         .padding(.trailing, 30)
                     Spacer()
@@ -105,9 +115,6 @@ struct CalculatorView: View {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }
-        
-    
-    
 }
 
 struct CalculatorView_Priviewer: PreviewProvider {
