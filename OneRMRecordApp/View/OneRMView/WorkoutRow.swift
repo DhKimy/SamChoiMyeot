@@ -39,9 +39,9 @@ struct WorkoutRow: View {
                     .padding(.trailing, 30)
             }
             .frame(height: 45)
-            Rectangle()
-                .foregroundColor(.white)
-                .frame(height: 0.5)
+            Divider()
+                .background(.white)
+                
         }
         .padding(.horizontal, 26)
     }
