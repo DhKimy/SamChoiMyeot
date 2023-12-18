@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmitterView: UIViewRepresentable {
+
     func makeUIView(context: Context) -> UIView {
         let view = UIView()
         view.backgroundColor = .clear
@@ -26,19 +27,20 @@ struct EmitterView: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(_ uiView: UIView, context: Context) {
-        
-    }
-    
-    func createEmitterCells() -> [CAEmitterCell] {
+    func updateUIView(_ uiView: UIView, context: Context) { }
+
+    private func createEmitterCells() -> [CAEmitterCell] {
         var emitterCells: [CAEmitterCell] = []
         
         for _ in 1...20 {
             let cell = CAEmitterCell()
-            
             // Create a random shape for the particle
             let shapeType = Int.random(in: 0...3)
-            
+            let red = CGFloat.random(in: 0...1)
+            let green = CGFloat.random(in: 0...1)
+            let blue = CGFloat.random(in: 0...1)
+            let alpha = CGFloat.random(in: 0.5...1)
+
             switch shapeType {
             case 0:
                 cell.contents = createCircle().cgImage
@@ -51,8 +53,7 @@ struct EmitterView: UIViewRepresentable {
             default:
                 cell.contents = createCircle().cgImage
             }
-            
-            
+
             cell.birthRate = 6
             cell.lifetime = 30
             cell.velocity = 200
@@ -63,19 +64,13 @@ struct EmitterView: UIViewRepresentable {
             cell.scaleRange = 3
             cell.spin = 5
             cell.spinRange = 5
-            let red = CGFloat.random(in: 0...1)
-            let green = CGFloat.random(in: 0...1)
-            let blue = CGFloat.random(in: 0...1)
-            let alpha = CGFloat.random(in: 0.5...1)
             cell.color = CGColor(red: red, green: green, blue: blue, alpha: alpha)
-            
             emitterCells.append(cell)
         }
-        
         return emitterCells
     }
     
-    func createCircle() -> UIImage {
+    private func createCircle() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
             let circlePath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 4, height: 4))
@@ -86,7 +81,7 @@ struct EmitterView: UIViewRepresentable {
         return image
     }
     
-    func createRectangle1() -> UIImage {
+    private func createRectangle1() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
             let rectanglePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 1, height: 10))
@@ -97,7 +92,7 @@ struct EmitterView: UIViewRepresentable {
         return image
     }
     
-    func createRectangle2() -> UIImage {
+    private func createRectangle2() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
             let rectanglePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 1, height: 5))
@@ -108,7 +103,7 @@ struct EmitterView: UIViewRepresentable {
         return image
     }
     
-    func createRectangle3() -> UIImage {
+    private func createRectangle3() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
             let rectanglePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 1, height: 2))
@@ -119,7 +114,7 @@ struct EmitterView: UIViewRepresentable {
         return image
     }
     
-    func getRect() -> CGRect {
+    private func getRect() -> CGRect {
         return UIScreen.main.bounds
     }
 }

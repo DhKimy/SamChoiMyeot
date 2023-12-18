@@ -48,7 +48,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                
                 VStack(spacing: 0) {
                     ZStack {
                         VStack(spacing: 0) {
@@ -65,7 +64,6 @@ struct ContentView: View {
                         }
                         .toggleStyle(MyToggleStyle())
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 4, alignment: .bottomTrailing)
-                        
                         
                         VStack(spacing: 0) {
                             Text("나의 삼대 중량")

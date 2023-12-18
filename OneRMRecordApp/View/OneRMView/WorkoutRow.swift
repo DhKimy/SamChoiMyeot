@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WorkoutRow: View {
+
     @ObservedObject var crossFitDataModel: CrossFitDataModel
     @State var rowNumber: Int
     @Binding var isPound: Bool

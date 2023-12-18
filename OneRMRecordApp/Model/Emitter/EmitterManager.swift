@@ -7,15 +7,9 @@
 
 import Foundation
 
-class EmitterManager: ObservableObject {
-    /**
-     이것이 싱글톤의 기본 밑바닥 작업이다.
-     */
-    static let shared = EmitterManager()
-    private init() {
-        
-    }
-    
+final class EmitterManager: ObservableObject {
+
     @Published var isEmitterOn: Bool = false
     @Published var isCongreteModalOn: Bool = false
+    static let shared = EmitterManager()
 }

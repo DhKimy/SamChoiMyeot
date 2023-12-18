@@ -8,27 +8,15 @@
 import Foundation
 import SwiftUI
 
-class CrossFitDataModel: ObservableObject {
+final class CrossFitDataModel: ObservableObject {
+
     static let shared = CrossFitDataModel()
     private let coreDataManager = CoreDataManager.shared
     private final let entityName = "CrossFit"
-    
     @Published var workoutDataArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     init() {
         fetchCrossFitData()
-    }
-    
-    func changeWeightStandard(isFound: Bool) {
-        if isFound {
-            for (index, i) in workoutDataArray.enumerated() {
-                workoutDataArray[index] = Int(Double(i) * 2.5)
-            }
-        } else {
-            for (index, i) in workoutDataArray.enumerated() {
-                workoutDataArray[index] = Int(Double(i) * 0.4)
-            }
-        }
     }
     
     func fetchCrossFitData() {
@@ -50,6 +38,7 @@ class CrossFitDataModel: ObservableObject {
         workoutDataArray[8] = Int(crossFitData.shoulderPress)
         
     }
+
     func saveCrossFitData(isPound: Bool = false) {
         var crossFitData: CrossFit?
         let fetchResult = coreDataManager.fetch(entityName: entityName)
@@ -129,12 +118,22 @@ class CrossFitDataModel: ObservableObject {
                 return true
             }
         }
-
         return false
     }
     
     func threeWorkoutTotal() -> Int {
         return workoutDataArray[0] + workoutDataArray[1] + workoutDataArray[2]
     }
-    
+
+    func changeWeightStandard(isFound: Bool) {
+        if isFound {
+            for (index, i) in workoutDataArray.enumerated() {
+                workoutDataArray[index] = Int(Double(i) * 2.5)
+            }
+        } else {
+            for (index, i) in workoutDataArray.enumerated() {
+                workoutDataArray[index] = Int(Double(i) * 0.4)
+            }
+        }
+    }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OneRMView: View {
+
     @ObservedObject var crossFitDataModel: CrossFitDataModel
     @Binding var isPound: Bool
     @State private var showAlert = false
@@ -63,7 +64,6 @@ struct OneRMView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        
     }
     
 }
