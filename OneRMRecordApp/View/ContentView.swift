@@ -8,43 +8,10 @@
 import SwiftUI
 import AVFoundation
 
-enum Tab {
-    case first
-    case second
-}
-
-
-struct MyToggleStyle: ToggleStyle {
-    private let width = 60.0
-    
-    func makeBody(configuration: Configuration) -> some View {
-        VStack {
-            configuration.label
-            
-            ZStack(alignment: configuration.isOn ? .trailing : .leading) {
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(width: width, height: width / 2)
-                    .foregroundColor(configuration.isOn ? .green : .gray)
-                
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(width: (width / 2) - 4, height: width / 2 - 6)
-                    .foregroundColor(.white)
-                    .onTapGesture {
-                        withAnimation {
-                            configuration.$isOn.wrappedValue.toggle()
-                        }
-                    }
-            }
-        }
-    }
-}
-
 struct ContentView: View {
-    @State private var selectedTab: Tab = .first
-    @ObservedObject var crossFitDataModel = CrossFitDataModel.shared
-    @State private var audioPlayer: AVAudioPlayer?
-    @AppStorage("isPound") var isPound: Bool = false
-    
+
+    @ObservedObject var viewModel: ContentViewViewModel
+
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -57,21 +24,21 @@ struct ContentView: View {
                                 .frame(maxWidth: 200)
                         }
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 3.5, alignment: .topLeading)
-                        Toggle(isOn: $isPound) {
+                        Toggle(isOn: $viewModel.isPound) {
                             Text("파운드로 보기")
                                 .font(.system(size: 16, weight: .bold))
                                 .padding(0)
                         }
-                        .toggleStyle(MyToggleStyle())
+                        .toggleStyle(WeightToggleStyle())
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 4, alignment: .bottomTrailing)
-                        
+
                         VStack(spacing: 0) {
                             Text("나의 삼대 중량")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .font(.system(size: 20, weight: .semibold))
                                 .padding(.bottom, 5)
-                            
-                            Text("\(crossFitDataModel.threeWorkoutTotal()) \(isPound ? "lb" : "kg")")
+
+                            Text("\(viewModel.crossFitDataModel.threeWorkoutTotal()) \(viewModel.isPound ? "lb" : "kg")")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .font(.system(size: 20, weight: .bold))
                                 .padding(.bottom, 20)
@@ -79,9 +46,9 @@ struct ContentView: View {
                                 .frame(height: 2)
                         }
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 3.5, alignment: .bottomLeading)
-                        
+
                         Button(action: {
-                            playSound(fileName: "lightweight_\(Int.random(in: 1 ... 4))", fileType: "mp3")
+                            viewModel.playSound(fileName: "lightweight_\(Int.random(in: 1 ... 4))", fileType: "mp3")
                         }) {
                             ZStack {
                                 Rectangle()
@@ -102,9 +69,9 @@ struct ContentView: View {
                 .onTapGesture {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
-                
-                TabView(selection: $selectedTab) {
-                    OneRMView(crossFitDataModel: crossFitDataModel, isPound: $isPound)
+
+                TabView(selection: $viewModel.selectedTab) {
+                    OneRMView(crossFitDataModel: viewModel.crossFitDataModel, isPound: $viewModel.isPound)
                         .tabItem {
                             VStack(spacing: 0) {
                                 Image(systemName: "dumbbell.fill")
@@ -115,7 +82,7 @@ struct ContentView: View {
                         .onTapGesture {
                             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         }
-                    CalculatorView(isPound: $isPound)
+                    CalculatorView(isPound: $viewModel.isPound)
                         .tabItem {
                             VStack(spacing: 0) {
                                 Image(systemName: "pencil")
@@ -125,34 +92,16 @@ struct ContentView: View {
                         .tag(Tab.second)
                 }
                 .accentColor(.green)
-                
             }
-            .onChange(of: isPound) { newValue in
-                crossFitDataModel.changeWeightStandard(isFound: newValue)
+            .onChange(of: viewModel.isPound) { newValue in
+                viewModel.changeWeightStandard(isFound: newValue)
             }
-            
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-    }
-}
-
-extension ContentView {
-    func playSound(fileName: String, fileType: String) {
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: fileType) else {
-            print("Sound file not found")
-            return
-        }
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.play()
-        } catch {
-            print("Error playing sound: \(error.localizedDescription)")
-        }
+        ContentView(viewModel: ContentViewViewModel(crossFitDataModel: CrossFitDataModel.shared))
     }
 }

@@ -19,6 +19,7 @@ struct WorkoutRow: View {
                 Text(WorkoutName.allCases[rowNumber].description)
                     .frame(maxWidth: 120, alignment: .leading)
                     .fontWeight(.black)
+
                 Spacer()
                 Text("약")
                 TextField("\(crossFitDataModel.workoutDataArray[rowNumber])", text: Binding(

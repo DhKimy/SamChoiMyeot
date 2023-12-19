@@ -13,12 +13,13 @@ struct OneRMView: View {
     @Binding var isPound: Bool
     @State private var showAlert = false
     @State private var isIncreaseWeight = false
+
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
                 ScrollView {
                     VStack {
-                        ForEach(Array(WorkoutName.allCases).indices, id:\.self) { index in
+                        ForEach(crossFitDataModel.workoutDataArray.indices, id: \.self) { index in
                             WorkoutRow(crossFitDataModel: crossFitDataModel, rowNumber: index, isPound: $isPound)
                         }
                     }

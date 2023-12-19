@@ -13,8 +13,8 @@ final class CrossFitDataModel: ObservableObject {
     static let shared = CrossFitDataModel()
     private let coreDataManager = CoreDataManager.shared
     private final let entityName = "CrossFit"
-    @Published var workoutDataArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    
+    @Published var workoutDataArray: [Int] = []
+
     init() {
         fetchCrossFitData()
     }
@@ -36,7 +36,6 @@ final class CrossFitDataModel: ObservableObject {
         workoutDataArray[6] = Int(crossFitData.overheadSquat)
         workoutDataArray[7] = Int(crossFitData.lunge)
         workoutDataArray[8] = Int(crossFitData.shoulderPress)
-        
     }
 
     func saveCrossFitData(isPound: Bool = false) {
@@ -62,11 +61,10 @@ final class CrossFitDataModel: ObservableObject {
         crossFit.overheadSquat = Int16(workoutDataArray[6])
         crossFit.shoulderPress = Int16(workoutDataArray[8])
         crossFit.snatch = Int16(workoutDataArray[4])
-        
-                
+
         coreDataManager.update(object: crossFit)
     }
-    
+
     func saveCrossFitData() {
         var crossFitData: CrossFit?
         let fetchResult = coreDataManager.fetch(entityName: entityName)
@@ -75,12 +73,12 @@ final class CrossFitDataModel: ObservableObject {
         } else if let newCrossFitData = coreDataManager.create(entityName: entityName, attributes: [:]) as? CrossFit {
             crossFitData = newCrossFitData
         }
-        
+
         guard let crossFit = crossFitData else {
             print("Failed to create or find UserData")
             return
         }
-        
+
         crossFit.backSquat = Int16(workoutDataArray[1])
         crossFit.benchPress = Int16(workoutDataArray[2])
         crossFit.cleanAndJerk = Int16(workoutDataArray[3])
@@ -90,7 +88,6 @@ final class CrossFitDataModel: ObservableObject {
         crossFit.overheadSquat = Int16(workoutDataArray[6])
         crossFit.shoulderPress = Int16(workoutDataArray[8])
         crossFit.snatch = Int16(workoutDataArray[4])
-        
                 
         coreDataManager.update(object: crossFit)
     }

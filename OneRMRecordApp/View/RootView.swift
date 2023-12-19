@@ -13,7 +13,11 @@ struct RootView: View {
 
     var body: some View {
         ZStack {
-            ContentView()
+            ContentView(
+                viewModel: ContentViewViewModel(
+                    crossFitDataModel: CrossFitDataModel()
+                )
+            )
 
             if viewModel.isEmitterOn {
                 EmitterView()
