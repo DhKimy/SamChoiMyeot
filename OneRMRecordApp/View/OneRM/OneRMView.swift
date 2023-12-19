@@ -9,18 +9,15 @@ import SwiftUI
 
 struct OneRMView: View {
 
-    @ObservedObject var crossFitDataModel: CrossFitDataModel
-    @Binding var isPound: Bool
-    @State private var showAlert = false
-    @State private var isIncreaseWeight = false
+    @ObservedObject var viewModel: OneRMViewModel
 
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
                 ScrollView {
                     VStack {
-                        ForEach(crossFitDataModel.workoutDataArray.indices, id: \.self) { index in
-                            WorkoutRow(crossFitDataModel: crossFitDataModel, rowNumber: index, isPound: $isPound)
+                        ForEach(viewModel.crossFitDataModel.workoutDataArray.indices, id: \.self) { index in
+                            WorkoutRow(crossFitDataModel: viewModel.crossFitDataModel, rowNumber: index, isPound: $viewModel.isPound)
                         }
                     }
                     .padding(.bottom, 150)
@@ -32,12 +29,12 @@ struct OneRMView: View {
                     .foregroundColor(Color.black.opacity(0.6))
                     .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
                 Button(action: {
-                    isIncreaseWeight = crossFitDataModel.checkDifferenceData()
-                    if isIncreaseWeight {
-                        emitterOn()
+                    viewModel.isIncreaseWeight = viewModel.crossFitDataModel.checkDifferenceData()
+                    if viewModel.isIncreaseWeight {
+                        viewModel.emitterOn()
                     }
-                    showAlert = true
-                    crossFitDataModel.saveCrossFitData()
+                    viewModel.showAlert = true
+                    viewModel.crossFitDataModel.saveCrossFitData()
                 }) {
                     ZStack {
                         Rectangle()
@@ -54,10 +51,10 @@ struct OneRMView: View {
                 }
                 .padding(.trailing, 10)
                 .position(x:UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2.25)
-                .alert(isPresented: $showAlert) {
+                .alert(isPresented: $viewModel.showAlert) {
                     Alert(
                         title: Text("저장"),
-                        message: Text("운동 기록이 저장되었습니다.\(isIncreaseWeight ? "\n증량을 축하합니다!" : "")"),
+                        message: Text("운동 기록이 저장되었습니다.\(viewModel.isIncreaseWeight ? "\n증량을 축하합니다!" : "")"),
                         dismissButton: .default(Text("확인"))
                     )
                 }
@@ -66,22 +63,14 @@ struct OneRMView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
-    
 }
 
 struct OneRMView_Previewer: PreviewProvider {
-    @ObservedObject static var crossFitDataModel = CrossFitDataModel.shared
-    @State static var isPound = false
-    static var previews: some View {
-        OneRMView(crossFitDataModel: crossFitDataModel, isPound: $isPound)
-    }
-}
 
-extension OneRMView {
-    private func emitterOn() {
-        EmitterManager.shared.isEmitterOn = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            EmitterManager.shared.isEmitterOn = false
-        }
+    @ObservedObject static var viewModel = OneRMViewModel(crossFitDataModel: CrossFitDataModel.shared)
+    @State static var isPound = false
+    
+    static var previews: some View {
+        OneRMView(viewModel: viewModel)
     }
 }

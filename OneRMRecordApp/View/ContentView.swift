@@ -71,7 +71,7 @@ struct ContentView: View {
                 }
 
                 TabView(selection: $viewModel.selectedTab) {
-                    OneRMView(crossFitDataModel: viewModel.crossFitDataModel, isPound: $viewModel.isPound)
+                    OneRMView(viewModel: OneRMViewModel(crossFitDataModel: CrossFitDataModel.shared))
                         .tabItem {
                             VStack(spacing: 0) {
                                 Image(systemName: "dumbbell.fill")

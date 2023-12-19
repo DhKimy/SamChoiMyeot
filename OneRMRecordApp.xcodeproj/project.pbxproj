@@ -16,6 +16,7 @@
 		C98862322B31CAD70080873D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862312B31CAD70080873D /* ContentViewModel.swift */; };
 		C98862352B31D8480080873D /* CrossFit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */; };
 		C98862362B31D8480080873D /* CrossFit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */; };
+		C98862382B31DD250080873D /* OneRMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862372B31DD250080873D /* OneRMViewModel.swift */; };
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
 		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
 		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
@@ -43,6 +44,7 @@
 		C98862312B31CAD70080873D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C98862372B31DD250080873D /* OneRMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMViewModel.swift; sourceTree = "<group>"; };
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				C988622A2B31C5F50080873D /* RootViewModel.swift */,
 				C98862312B31CAD70080873D /* ContentViewModel.swift */,
+				C98862392B31DD2D0080873D /* OneRM */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -102,14 +105,22 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		C98862392B31DD2D0080873D /* OneRM */ = {
+			isa = PBXGroup;
+			children = (
+				C98862372B31DD250080873D /* OneRMViewModel.swift */,
+			);
+			path = OneRM;
+			sourceTree = "<group>";
+		};
 		C9CE94342A9E071C0037BFFF /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C9CE94322A9E057F0037BFFF /* RootView.swift */,
 				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
 				C9CE943B2A9E07EB0037BFFF /* EmitterView */,
-				C9CE94392A9E07C00037BFFF /* OneRMView */,
-				C9CE943A2A9E07D60037BFFF /* CalculatorView */,
+				C9CE94392A9E07C00037BFFF /* OneRM */,
+				C9CE943A2A9E07D60037BFFF /* Calculator */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,21 +163,21 @@
 			path = CrossFitData;
 			sourceTree = "<group>";
 		};
-		C9CE94392A9E07C00037BFFF /* OneRMView */ = {
+		C9CE94392A9E07C00037BFFF /* OneRM */ = {
 			isa = PBXGroup;
 			children = (
 				C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */,
 				C90400512A94374B00803EFE /* WorkoutRow.swift */,
 			);
-			path = OneRMView;
+			path = OneRM;
 			sourceTree = "<group>";
 		};
-		C9CE943A2A9E07D60037BFFF /* CalculatorView */ = {
+		C9CE943A2A9E07D60037BFFF /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
 				C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */,
 			);
-			path = CalculatorView;
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		C9CE943B2A9E07EB0037BFFF /* EmitterView */ = {
@@ -300,6 +311,7 @@
 				C9EE2EF72A90F15200EE6557 /* CrossFitDataModel.swift in Sources */,
 				C9EE2EEE2A9093DB00EE6557 /* CalculatorView.swift in Sources */,
 				C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */,
+				C98862382B31DD250080873D /* OneRMViewModel.swift in Sources */,
 				C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */,
 				C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */,
 				C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */,
