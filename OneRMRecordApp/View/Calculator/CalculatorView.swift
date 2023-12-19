@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    @State var weight = ""
-    @State var count = ""
-    @State var resultWeight = 0.0
-    @State private var isKeyboardShown = false
-    @Binding var isPound: Bool
-    
+
+    @ObservedObject private var viewModel: CalculatorViewModel
+
+    init(isPound: Binding<Bool>) {
+        _viewModel = ObservedObject(wrappedValue: CalculatorViewModel(isPound: isPound.wrappedValue))
+    }
+
     var body: some View {
         VStack {
             
@@ -23,16 +24,17 @@ struct CalculatorView: View {
                         .frame(maxWidth: 120, alignment: .center)
                         .fontWeight(.black)
                     Spacer()
-                    TextField("무게를 입력하세요", text: $weight)
+                    TextField("무게를 입력하세요", text: 
+                                $viewModel.weight)
                         .tint(.white)
                         .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
                         .textContentType(.oneTimeCode) // 숫자만 입력 받도록 설정
-                        .onChange(of: weight) { newValue in
+                        .onChange(of: viewModel.weight) { newValue in
                             if let number = Int(newValue), number > 1000 {
-                                weight = "1000" // 1000 이상의 값은 1000으로 설정
+                                viewModel.weight = "1000" // 1000 이상의 값은 1000으로 설정
                             }
                         }
-                    Text(isPound ? "lb" : "kg")
+                    Text(viewModel.isPound ? "lb" : "kg")
                         .padding(.trailing, 30)
                     Spacer()
                 }
@@ -50,13 +52,13 @@ struct CalculatorView: View {
                         .frame(maxWidth: 120, alignment: .center)
                         .fontWeight(.black)
                     Spacer()
-                    TextField("횟수를 입력하세요", text: $count)
+                    TextField("횟수를 입력하세요", text: $viewModel.count)
                         .tint(.white)
                         .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
                         .textContentType(.oneTimeCode) // 숫자만 입력 받도록 설정
-                        .onChange(of: count) { newValue in
+                        .onChange(of: viewModel.count) { newValue in
                             if let number = Int(newValue), number > 100 {
-                                count = "100" // 1000 이상의 값은 1000으로 설정
+                                viewModel.count = "100" // 1000 이상의 값은 1000으로 설정
                             }
                         }
                     Text("회")
@@ -74,14 +76,14 @@ struct CalculatorView: View {
             
             HStack(spacing: 0) {
                 Button(action: {
-                    calculate1RM()
+                    viewModel.calculate1RM()
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {
                     ZStack {
                         Rectangle()
-                            .foregroundColor(weight == "" || count == "" ? .gray : .green)
+                            .foregroundColor(viewModel.weight == "" || viewModel.count == "" ? .gray : .green)
                         Text("계산하기")
-                            .foregroundColor(weight == "" || count == "" ? .black : .white)
+                            .foregroundColor(viewModel.weight == "" || viewModel.count == "" ? .black : .white)
                             .fontWeight(.black)
                     }
                     .frame(maxWidth: UIScreen.main.bounds.width / 2)
@@ -90,26 +92,26 @@ struct CalculatorView: View {
                     
                 }
                 .padding(.trailing, 10)
-                .disabled(weight == "" || count == "" ? true : false)
-                
+                .disabled(viewModel.weight == "" || viewModel.count == "" ? true : false)
+
             }
             .padding(.horizontal, 26)
             .padding(.bottom, 20)
             
             VStack(spacing: 10) {
-                Text(resultWeight != 0 ? "당신의 1RM은" : "")
+                Text(viewModel.resultWeight != 0 ? "당신의 1RM은" : "")
                     .font(.system(size: 18, weight: .semibold))
-                Text(resultWeight != 0 ? "\(Int(resultWeight)) \(isPound ? "lb" : "kg")" : "")
+                Text(viewModel.resultWeight != 0 ? "\(Int(viewModel.resultWeight)) \(viewModel.isPound ? "lb" : "kg")" : "")
                     .font(.system(size: 20, weight: .black))
-                Text(resultWeight != 0 ? "입니다." : "")
+                Text(viewModel.resultWeight != 0 ? "입니다." : "")
                     .font(.system(size: 18, weight: .semibold))
             }
                 
         }
         .onDisappear {
-            resultWeight = 0.0
-            weight = ""
-            count = ""
+            viewModel.resultWeight = 0.0
+            viewModel.weight = ""
+            viewModel.count = ""
         }
         .onTapGesture {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -122,14 +124,5 @@ struct CalculatorView_Priviewer: PreviewProvider {
     
     static var previews: some View {
         CalculatorView(isPound: $isPound)
-    }
-}
-
-extension CalculatorView {
-    private func calculate1RM() {
-        let weight = Int(self.weight)
-        let count = Int(self.count)
-        
-        self.resultWeight = Double(weight!) * (1 + (0.033 * Double(count!)))
     }
 }

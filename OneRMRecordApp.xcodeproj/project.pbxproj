@@ -17,6 +17,7 @@
 		C98862352B31D8480080873D /* CrossFit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */; };
 		C98862362B31D8480080873D /* CrossFit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */; };
 		C98862382B31DD250080873D /* OneRMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862372B31DD250080873D /* OneRMViewModel.swift */; };
+		C98862402B31E2A90080873D /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988623F2B31E2A90080873D /* CalculatorViewModel.swift */; };
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
 		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
 		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
@@ -45,6 +46,7 @@
 		C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C98862372B31DD250080873D /* OneRMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMViewModel.swift; sourceTree = "<group>"; };
+		C988623F2B31E2A90080873D /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				C988622A2B31C5F50080873D /* RootViewModel.swift */,
 				C98862312B31CAD70080873D /* ContentViewModel.swift */,
 				C98862392B31DD2D0080873D /* OneRM */,
+				C988623E2B31E2920080873D /* Calculator */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,6 +141,14 @@
 				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		C988623E2B31E2920080873D /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				C988623F2B31E2A90080873D /* CalculatorViewModel.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		C9CE94342A9E071C0037BFFF /* View */ = {
@@ -332,6 +343,7 @@
 				C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */,
 				C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */,
 				C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */,
+				C98862402B31E2A90080873D /* CalculatorViewModel.swift in Sources */,
 				C98862352B31D8480080873D /* CrossFit+CoreDataClass.swift in Sources */,
 				C98862322B31CAD70080873D /* ContentViewModel.swift in Sources */,
 				C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */,
