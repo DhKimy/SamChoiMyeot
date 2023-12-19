@@ -17,14 +17,15 @@ struct CalculatorView: View {
 
     var body: some View {
         VStack {
-            
             VStack(spacing: 0) {
                 HStack(spacing: 0) {
                     Text("무게 : ")
                         .frame(maxWidth: 120, alignment: .center)
                         .fontWeight(.black)
+
                     Spacer()
-                    TextField("무게를 입력하세요", text: 
+
+                    TextField("무게를 입력하세요", text:
                                 $viewModel.weight)
                         .tint(.white)
                         .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
@@ -36,6 +37,7 @@ struct CalculatorView: View {
                         }
                     Text(viewModel.isPound ? "lb" : "kg")
                         .padding(.trailing, 30)
+
                     Spacer()
                 }
                 .frame(height: 45)
@@ -51,7 +53,9 @@ struct CalculatorView: View {
                     Text("횟수 : ")
                         .frame(maxWidth: 120, alignment: .center)
                         .fontWeight(.black)
+
                     Spacer()
+
                     TextField("횟수를 입력하세요", text: $viewModel.count)
                         .tint(.white)
                         .keyboardType(.numberPad) // 숫자 키패드만 뜨도록 설정
@@ -61,8 +65,10 @@ struct CalculatorView: View {
                                 viewModel.count = "100" // 1000 이상의 값은 1000으로 설정
                             }
                         }
+
                     Text("회")
                         .padding(.trailing, 30)
+
                     Spacer()
                 }
                 .frame(height: 45)
@@ -82,6 +88,7 @@ struct CalculatorView: View {
                     ZStack {
                         Rectangle()
                             .foregroundColor(viewModel.weight == "" || viewModel.count == "" ? .gray : .green)
+
                         Text("계산하기")
                             .foregroundColor(viewModel.weight == "" || viewModel.count == "" ? .black : .white)
                             .fontWeight(.black)
@@ -93,11 +100,10 @@ struct CalculatorView: View {
                 }
                 .padding(.trailing, 10)
                 .disabled(viewModel.weight == "" || viewModel.count == "" ? true : false)
-
             }
             .padding(.horizontal, 26)
             .padding(.bottom, 20)
-            
+
             VStack(spacing: 10) {
                 Text(viewModel.resultWeight != 0 ? "당신의 1RM은" : "")
                     .font(.system(size: 18, weight: .semibold))
@@ -106,7 +112,6 @@ struct CalculatorView: View {
                 Text(viewModel.resultWeight != 0 ? "입니다." : "")
                     .font(.system(size: 18, weight: .semibold))
             }
-                
         }
         .onDisappear {
             viewModel.resultWeight = 0.0
@@ -114,7 +119,12 @@ struct CalculatorView: View {
             viewModel.count = ""
         }
         .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            UIApplication.shared.sendAction(
+                #selector(UIResponder.resignFirstResponder),
+                to: nil,
+                from: nil,
+                for: nil
+            )
         }
     }
 }
