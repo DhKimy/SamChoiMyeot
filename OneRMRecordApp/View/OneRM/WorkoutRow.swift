@@ -21,6 +21,7 @@ struct WorkoutRow: View {
                     .fontWeight(.black)
 
                 Spacer()
+
                 Text("약")
                 TextField("\(crossFitDataModel.workoutDataArray[rowNumber])", text: Binding(
                     get: {
@@ -41,18 +42,20 @@ struct WorkoutRow: View {
                     .padding(.trailing, 30)
             }
             .frame(height: 45)
+
             Divider()
                 .background(.white)
-                
         }
         .padding(.horizontal, 26)
     }
 }
 
 struct WorkoutRow_Previews: PreviewProvider {
+
     @ObservedObject static var crossFitDataModel = CrossFitDataModel()
     @State static var rowNumber = 0
     @State static var isPound = false
+
     static var previews: some View {
         WorkoutRow(crossFitDataModel: crossFitDataModel, rowNumber: 0, isPound: $isPound)
     }

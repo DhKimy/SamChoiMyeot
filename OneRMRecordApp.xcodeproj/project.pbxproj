@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90400512A94374B00803EFE /* WorkoutRow.swift */; };
-		C95DC46C2A94663500649FF7 /* WorkoutName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DC46B2A94663500649FF7 /* WorkoutName.swift */; };
+		C95DC46C2A94663500649FF7 /* WorkoutNameEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DC46B2A94663500649FF7 /* WorkoutNameEnum.swift */; };
 		C95DC4712A948C5200649FF7 /* lightweight_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */; };
 		C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988622A2B31C5F50080873D /* RootViewModel.swift */; };
 		C988622E2B31C9C60080873D /* TabEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988622D2B31C9C60080873D /* TabEnum.swift */; };
@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		C90400512A94374B00803EFE /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
-		C95DC46B2A94663500649FF7 /* WorkoutName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutName.swift; sourceTree = "<group>"; };
+		C95DC46B2A94663500649FF7 /* WorkoutNameEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNameEnum.swift; sourceTree = "<group>"; };
 		C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_2.mp3; sourceTree = "<group>"; };
 		C988622A2B31C5F50080873D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		C988622D2B31C9C60080873D /* TabEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnum.swift; sourceTree = "<group>"; };
@@ -99,8 +99,9 @@
 		C988622C2B31C9AA0080873D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C988622D2B31C9C60080873D /* TabEnum.swift */,
-				C988622F2B31C9F00080873D /* WeightToggleStyle.swift */,
+				C988623A2B31E1040080873D /* Enum */,
+				C988623C2B31E1270080873D /* Managers */,
+				C988623B2B31E1130080873D /* Style */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -111,6 +112,32 @@
 				C98862372B31DD250080873D /* OneRMViewModel.swift */,
 			);
 			path = OneRM;
+			sourceTree = "<group>";
+		};
+		C988623A2B31E1040080873D /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C988622D2B31C9C60080873D /* TabEnum.swift */,
+				C95DC46B2A94663500649FF7 /* WorkoutNameEnum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		C988623B2B31E1130080873D /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				C988622F2B31C9F00080873D /* WeightToggleStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		C988623C2B31E1270080873D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */,
+				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		C9CE94342A9E071C0037BFFF /* View */ = {
@@ -129,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				C9CE94382A9E07AE0037BFFF /* CrossFitData */,
-				C9CE94372A9E07980037BFFF /* Emitter */,
 				C9CE94362A9E07860037BFFF /* CoreData */,
 			);
 			path = Model;
@@ -141,23 +167,13 @@
 				C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */,
 				C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */,
 				C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */,
-				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		C9CE94372A9E07980037BFFF /* Emitter */ = {
-			isa = PBXGroup;
-			children = (
-				C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */,
-			);
-			path = Emitter;
 			sourceTree = "<group>";
 		};
 		C9CE94382A9E07AE0037BFFF /* CrossFitData */ = {
 			isa = PBXGroup;
 			children = (
-				C95DC46B2A94663500649FF7 /* WorkoutName.swift */,
 				C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */,
 			);
 			path = CrossFitData;
@@ -302,7 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C95DC46C2A94663500649FF7 /* WorkoutName.swift in Sources */,
+				C95DC46C2A94663500649FF7 /* WorkoutNameEnum.swift in Sources */,
 				C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */,
 				C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */,
 				C988622E2B31C9C60080873D /* TabEnum.swift in Sources */,
