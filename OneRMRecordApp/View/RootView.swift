@@ -20,7 +20,7 @@ struct RootView: View {
             )
 
             if viewModel.isEmitterOn {
-                EmitterView()
+                EmitterView(viewModel: EmitterViewModel())
             }
         }
         .onAppear {

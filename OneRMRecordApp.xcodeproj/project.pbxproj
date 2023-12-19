@@ -18,6 +18,7 @@
 		C98862362B31D8480080873D /* CrossFit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */; };
 		C98862382B31DD250080873D /* OneRMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862372B31DD250080873D /* OneRMViewModel.swift */; };
 		C98862402B31E2A90080873D /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988623F2B31E2A90080873D /* CalculatorViewModel.swift */; };
+		C98862432B31E5860080873D /* EmitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862422B31E5860080873D /* EmitterViewModel.swift */; };
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
 		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
 		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
@@ -47,6 +48,7 @@
 		C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C98862372B31DD250080873D /* OneRMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMViewModel.swift; sourceTree = "<group>"; };
 		C988623F2B31E2A90080873D /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		C98862422B31E5860080873D /* EmitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterViewModel.swift; sourceTree = "<group>"; };
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		C98862292B31C5CD0080873D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C98862412B31E5700080873D /* Emitter */,
 				C988622A2B31C5F50080873D /* RootViewModel.swift */,
 				C98862312B31CAD70080873D /* ContentViewModel.swift */,
 				C98862392B31DD2D0080873D /* OneRM */,
@@ -151,12 +154,20 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
+		C98862412B31E5700080873D /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				C98862422B31E5860080873D /* EmitterViewModel.swift */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
 		C9CE94342A9E071C0037BFFF /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C9CE94322A9E057F0037BFFF /* RootView.swift */,
 				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
-				C9CE943B2A9E07EB0037BFFF /* EmitterView */,
+				C9CE943B2A9E07EB0037BFFF /* Emitter */,
 				C9CE94392A9E07C00037BFFF /* OneRM */,
 				C9CE943A2A9E07D60037BFFF /* Calculator */,
 			);
@@ -207,12 +218,12 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
-		C9CE943B2A9E07EB0037BFFF /* EmitterView */ = {
+		C9CE943B2A9E07EB0037BFFF /* Emitter */ = {
 			isa = PBXGroup;
 			children = (
 				C9CE942E2A9DCC320037BFFF /* EmitterView.swift */,
 			);
-			path = EmitterView;
+			path = Emitter;
 			sourceTree = "<group>";
 		};
 		C9EE2ED12A90925300EE6557 = {
@@ -331,6 +342,7 @@
 			files = (
 				C95DC46C2A94663500649FF7 /* WorkoutNameEnum.swift in Sources */,
 				C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */,
+				C98862432B31E5860080873D /* EmitterViewModel.swift in Sources */,
 				C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */,
 				C988622E2B31C9C60080873D /* TabEnum.swift in Sources */,
 				C98862362B31D8480080873D /* CrossFit+CoreDataProperties.swift in Sources */,

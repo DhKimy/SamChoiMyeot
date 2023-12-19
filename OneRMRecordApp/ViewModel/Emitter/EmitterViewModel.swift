@@ -1,37 +1,22 @@
 //
-//  EmitterView.swift
+//  EmitterViewModel.swift
 //  OneRMRecordApp
 //
-//  Created by 김동현 on 2023/08/29.
+//  Created by 김동현 on 12/19/23.
 //
 
 import SwiftUI
 
-struct EmitterView: UIViewRepresentable {
+final class EmitterViewModel: ObservableObject {
+    @Published var emitterCells: [CAEmitterCell] = []
 
-    func makeUIView(context: Context) -> UIView {
-        let view = UIView()
-        view.backgroundColor = .clear
-        
-        // Emitter layer
-        let emitterLayer = CAEmitterLayer()
-        emitterLayer.emitterShape = .line
-        emitterLayer.emitterCells = createEmitterCells()
-        
-        // Size and Position
-        emitterLayer.emitterSize = CGSize(width: getRect().width, height: 1)
-        emitterLayer.emitterPosition = CGPoint(x: getRect().width / 2, y: 0)
-        
-        view.layer.addSublayer(emitterLayer)
-        
-        return view
+    init() {
+        updateEmitterCells()
     }
-    
-    func updateUIView(_ uiView: UIView, context: Context) { }
 
-    private func createEmitterCells() -> [CAEmitterCell] {
+    func updateEmitterCells() {
         var emitterCells: [CAEmitterCell] = []
-        
+
         for _ in 1...20 {
             let cell = CAEmitterCell()
             // Create a random shape for the particle
@@ -67,9 +52,13 @@ struct EmitterView: UIViewRepresentable {
             cell.color = CGColor(red: red, green: green, blue: blue, alpha: alpha)
             emitterCells.append(cell)
         }
-        return emitterCells
+        self.emitterCells = emitterCells
     }
-    
+}
+
+// MARK: - Private Method
+extension EmitterViewModel {
+
     private func createCircle() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
@@ -77,10 +66,10 @@ struct EmitterView: UIViewRepresentable {
             UIColor.white.setFill()
             circlePath.fill()
         }
-        
+
         return image
     }
-    
+
     private func createRectangle1() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
@@ -88,10 +77,10 @@ struct EmitterView: UIViewRepresentable {
             UIColor.white.setFill()
             rectanglePath.fill()
         }
-        
+
         return image
     }
-    
+
     private func createRectangle2() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
@@ -99,10 +88,10 @@ struct EmitterView: UIViewRepresentable {
             UIColor.white.setFill()
             rectanglePath.fill()
         }
-        
+
         return image
     }
-    
+
     private func createRectangle3() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 10, height: 10))
         let image = renderer.image { context in
@@ -110,17 +99,7 @@ struct EmitterView: UIViewRepresentable {
             UIColor.white.setFill()
             rectanglePath.fill()
         }
-        
-        return image
-    }
-    
-    private func getRect() -> CGRect {
-        return UIScreen.main.bounds
-    }
-}
 
-struct EmitterView_Previewer: PreviewProvider {
-    static var previews: some View {
-        EmitterView()
+        return image
     }
 }
