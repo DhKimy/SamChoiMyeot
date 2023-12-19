@@ -14,6 +14,8 @@
 		C988622E2B31C9C60080873D /* TabEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988622D2B31C9C60080873D /* TabEnum.swift */; };
 		C98862302B31C9F00080873D /* WeightToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988622F2B31C9F00080873D /* WeightToggleStyle.swift */; };
 		C98862322B31CAD70080873D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862312B31CAD70080873D /* ContentViewModel.swift */; };
+		C98862352B31D8480080873D /* CrossFit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */; };
+		C98862362B31D8480080873D /* CrossFit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */; };
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
 		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
 		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
@@ -26,8 +28,6 @@
 		C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */; };
 		C9EE2EEE2A9093DB00EE6557 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */; };
 		C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */; };
-		C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */; };
-		C9EE2EF52A909EB200EE6557 /* CrossFit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */; };
 		C9EE2EF72A90F15200EE6557 /* CrossFitDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */; };
 		C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */; };
 		C9FF51962A9123BB005FC3F6 /* lightweight_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9FF51952A9123BB005FC3F6 /* lightweight_1.mp3 */; };
@@ -41,6 +41,8 @@
 		C988622D2B31C9C60080873D /* TabEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnum.swift; sourceTree = "<group>"; };
 		C988622F2B31C9F00080873D /* WeightToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightToggleStyle.swift; sourceTree = "<group>"; };
 		C98862312B31CAD70080873D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -54,8 +56,6 @@
 		C9EE2EEB2A90939C00EE6557 /* OneRMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMView.swift; sourceTree = "<group>"; };
 		C9EE2EED2A9093DB00EE6557 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		C9EE2EF02A909D2800EE6557 /* HealthData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthData.xcdatamodel; sourceTree = "<group>"; };
-		C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossFit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C9EE2EF62A90F15200EE6557 /* CrossFitDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossFitDataModel.swift; sourceTree = "<group>"; };
 		C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C9FF51952A9123BB005FC3F6 /* lightweight_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_1.mp3; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				C9EE2EEF2A909D2800EE6557 /* HealthData.xcdatamodeld */,
-				C9EE2EF22A909EB200EE6557 /* CrossFit+CoreDataClass.swift */,
-				C9EE2EF32A909EB200EE6557 /* CrossFit+CoreDataProperties.swift */,
+				C98862332B31D8480080873D /* CrossFit+CoreDataClass.swift */,
+				C98862342B31D8480080873D /* CrossFit+CoreDataProperties.swift */,
 				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
@@ -293,18 +293,18 @@
 			files = (
 				C95DC46C2A94663500649FF7 /* WorkoutName.swift in Sources */,
 				C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */,
-				C9EE2EF52A909EB200EE6557 /* CrossFit+CoreDataProperties.swift in Sources */,
 				C9EE2EE02A90925300EE6557 /* ContentView.swift in Sources */,
 				C988622E2B31C9C60080873D /* TabEnum.swift in Sources */,
+				C98862362B31D8480080873D /* CrossFit+CoreDataProperties.swift in Sources */,
 				C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */,
 				C9EE2EF72A90F15200EE6557 /* CrossFitDataModel.swift in Sources */,
 				C9EE2EEE2A9093DB00EE6557 /* CalculatorView.swift in Sources */,
-				C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */,
 				C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */,
 				C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */,
 				C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */,
 				C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */,
 				C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */,
+				C98862352B31D8480080873D /* CrossFit+CoreDataClass.swift in Sources */,
 				C98862322B31CAD70080873D /* ContentViewModel.swift in Sources */,
 				C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */,
 				C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */,
