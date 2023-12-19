@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct RootView: View {
-    @ObservedObject var emitterManager = EmitterManager.shared
-    
+
+    @ObservedObject var viewModel: RootViewModel
+
     var body: some View {
         ZStack {
             ContentView()
-            if emitterManager.isEmitterOn {
+
+            if viewModel.isEmitterOn {
                 EmitterView()
             }
+        }
+        .onAppear {
+            // RootView가 나타날 때의 초기화 로직(데이터 로딩, 푸시 알림 초기화 등)
         }
     }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+        RootView(viewModel: RootViewModel())
     }
 }

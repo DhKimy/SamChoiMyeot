@@ -10,6 +10,7 @@
 		C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90400512A94374B00803EFE /* WorkoutRow.swift */; };
 		C95DC46C2A94663500649FF7 /* WorkoutName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DC46B2A94663500649FF7 /* WorkoutName.swift */; };
 		C95DC4712A948C5200649FF7 /* lightweight_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */; };
+		C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988622A2B31C5F50080873D /* RootViewModel.swift */; };
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
 		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
 		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
@@ -33,6 +34,7 @@
 		C90400512A94374B00803EFE /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
 		C95DC46B2A94663500649FF7 /* WorkoutName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutName.swift; sourceTree = "<group>"; };
 		C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_2.mp3; sourceTree = "<group>"; };
+		C988622A2B31C5F50080873D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -76,9 +78,18 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		C98862292B31C5CD0080873D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C988622A2B31C5F50080873D /* RootViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C9CE94342A9E071C0037BFFF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C9CE94322A9E057F0037BFFF /* RootView.swift */,
 				C9EE2EDF2A90925300EE6557 /* ContentView.swift */,
 				C9CE943B2A9E07EB0037BFFF /* EmitterView */,
 				C9CE94392A9E07C00037BFFF /* OneRMView */,
@@ -170,9 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				C9EE2EDD2A90925300EE6557 /* OneRMRecordAppApp.swift */,
-				C9CE94322A9E057F0037BFFF /* RootView.swift */,
-				C9CE94342A9E071C0037BFFF /* View */,
 				C9CE94352A9E072F0037BFFF /* Model */,
+				C9CE94342A9E071C0037BFFF /* View */,
+				C98862292B31C5CD0080873D /* ViewModel */,
 				C95DC46D2A947DEE00649FF7 /* Resource */,
 				C9FF51972A9129FB005FC3F6 /* Info.plist */,
 				C9EE2EE12A90925400EE6557 /* Assets.xcassets */,
@@ -273,6 +284,7 @@
 				C9EE2EF42A909EB200EE6557 /* CrossFit+CoreDataClass.swift in Sources */,
 				C9EE2EEC2A90939C00EE6557 /* OneRMView.swift in Sources */,
 				C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */,
+				C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */,
 				C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */,
 				C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */,
 				C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */,
