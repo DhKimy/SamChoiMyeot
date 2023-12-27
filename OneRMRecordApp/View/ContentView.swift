@@ -11,6 +11,14 @@ import AVFoundation
 struct ContentView: View {
 
     @ObservedObject var viewModel: ContentViewViewModel
+    @State var trainingType = 0
+    @State var trainingName = "나의 삼대 중량"
+    @State var trainingWeight: String
+
+    init(viewModel: ContentViewViewModel) {
+        self.viewModel = viewModel
+        self.trainingWeight = String(viewModel.crossFitDataModel.threeWorkoutTotal())
+    }
 
     var body: some View {
         ZStack {
@@ -33,12 +41,12 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 4, alignment: .bottomTrailing)
 
                         VStack(spacing: 0) {
-                            Text("나의 삼대 중량")
+                            Text(trainingName)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .font(.system(size: 20, weight: .semibold))
                                 .padding(.bottom, 5)
 
-                            Text("\(viewModel.crossFitDataModel.threeWorkoutTotal()) \(viewModel.isPound ? "lb" : "kg")")
+                            Text("\(trainingWeight) \(viewModel.isPound ? "lb" : "kg")")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .font(.system(size: 20, weight: .bold))
                                 .padding(.bottom, 20)
@@ -46,6 +54,16 @@ struct ContentView: View {
                                 .frame(height: 2)
                         }
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 3.5, alignment: .bottomLeading)
+                        .onTapGesture {
+                            if trainingType == 2 {
+                                trainingType = 0
+                            } else {
+                                trainingType += 1
+                            }
+
+                            trainingName = viewModel.onTapWeightTitleName(trainingType)
+                            trainingWeight = viewModel.onTapWeightTitleWeight(trainingType)
+                        }
 
                         Button(action: {
                             viewModel.playSound(fileName: "lightweight_\(Int.random(in: 1 ... 4))", fileType: "mp3")

@@ -158,6 +158,14 @@ final class CrossFitDataModel: ObservableObject {
         return workoutDataArray[0] + workoutDataArray[1] + workoutDataArray[2]
     }
 
+    func weightLiftingTotal() -> Int {
+        return workoutDataArray[8] + workoutDataArray[10]
+    }
+
+    func topWeight() -> Int {
+        return workoutDataArray.max() ?? 0
+    }
+
     func changeWeightStandard(isFound: Bool) {
         if isFound {
             for (index, i) in workoutDataArray.enumerated() {

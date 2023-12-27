@@ -41,4 +41,26 @@ final class ContentViewViewModel: ObservableObject {
     func changeWeightStandard(isFound: Bool) {
         crossFitDataModel.changeWeightStandard(isFound: isFound)
     }
+
+    func onTapWeightTitleName(_ type: Int) -> String {
+        switch type {
+        case 0:
+            return "나의 삼대 중량"
+        case 1:
+            return "나의 역도 중량"
+        default:
+            return "가장 무겁게 든 중량"
+        }
+    }
+
+    func onTapWeightTitleWeight(_ type: Int) -> String {
+        switch type {
+        case 0:
+            return "\(crossFitDataModel.threeWorkoutTotal())"
+        case 1:
+            return "\(crossFitDataModel.weightLiftingTotal())"
+        default:
+            return "\(crossFitDataModel.topWeight())"
+        }
+    }
 }
