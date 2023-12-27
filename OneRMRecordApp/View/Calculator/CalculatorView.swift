@@ -62,7 +62,7 @@ struct CalculatorView: View {
                         .textContentType(.oneTimeCode) // 숫자만 입력 받도록 설정
                         .onChange(of: viewModel.count) { newValue in
                             if let number = Int(newValue), number > 100 {
-                                viewModel.count = "100" // 1000 이상의 값은 1000으로 설정
+                                viewModel.count = "100" // 100 초과의 값은 100으로 설정
                             }
                         }
 

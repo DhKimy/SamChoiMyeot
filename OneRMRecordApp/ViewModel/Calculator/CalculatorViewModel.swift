@@ -22,6 +22,6 @@ final class CalculatorViewModel: ObservableObject {
             return
         }
 
-        self.resultWeight = Double(weight) * (1 + (0.033 * Double(count)))
+        self.resultWeight = Double(weight) * (1 + (0.0333 * Double(count)))
     }
 }
