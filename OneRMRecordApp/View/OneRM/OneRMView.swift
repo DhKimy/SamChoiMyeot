@@ -31,7 +31,10 @@ struct OneRMView: View {
                 Button(action: {
                     viewModel.isIncreaseWeight = viewModel.crossFitDataModel.checkDifferenceData()
                     if viewModel.isIncreaseWeight {
-                        viewModel.emitterOn()
+                        viewModel.isEmitterOn = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            viewModel.isEmitterOn = false
+                        }
                     }
                     viewModel.showAlert = true
                     viewModel.crossFitDataModel.saveCrossFitData()
@@ -57,6 +60,12 @@ struct OneRMView: View {
                         message: Text("운동 기록이 저장되었습니다.\(viewModel.isIncreaseWeight ? "\n증량을 축하합니다!" : "")"),
                         dismissButton: .default(Text("확인"))
                     )
+                }
+                .overlay {
+                    if viewModel.isEmitterOn {
+                        EmitterView(viewModel: EmitterViewModel())
+                            .edgesIgnoringSafeArea(.all)
+                    }
                 }
             }
         }

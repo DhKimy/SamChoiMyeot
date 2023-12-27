@@ -8,6 +8,7 @@
 import SwiftUI
 
 final class EmitterViewModel: ObservableObject {
+
     @Published var emitterCells: [CAEmitterCell] = []
 
     init() {

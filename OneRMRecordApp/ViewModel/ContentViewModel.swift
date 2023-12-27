@@ -13,6 +13,7 @@ final class ContentViewViewModel: ObservableObject {
     @ObservedObject var crossFitDataModel = CrossFitDataModel.shared
     @Published var selectedTab: Tab = .first
     @Published var isPound: Bool = false
+
     private var audioPlayer: AVAudioPlayer?
 
     init(crossFitDataModel: CrossFitDataModel) {

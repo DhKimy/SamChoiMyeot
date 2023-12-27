@@ -18,10 +18,6 @@ struct RootView: View {
                     crossFitDataModel: CrossFitDataModel()
                 )
             )
-
-            if viewModel.isEmitterOn {
-                EmitterView(viewModel: EmitterViewModel())
-            }
         }
         .onAppear {
             // RootView가 나타날 때의 초기화 로직(데이터 로딩, 푸시 알림 초기화 등)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90400512A94374B00803EFE /* WorkoutRow.swift */; };
+		C95AC3B62B3C68EC0035BB86 /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AC3B52B3C68EC0035BB86 /* EmitterManager.swift */; };
 		C95DC46C2A94663500649FF7 /* WorkoutNameEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DC46B2A94663500649FF7 /* WorkoutNameEnum.swift */; };
 		C95DC4712A948C5200649FF7 /* lightweight_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */; };
 		C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988622A2B31C5F50080873D /* RootViewModel.swift */; };
@@ -20,7 +21,6 @@
 		C98862402B31E2A90080873D /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988623F2B31E2A90080873D /* CalculatorViewModel.swift */; };
 		C98862432B31E5860080873D /* EmitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98862422B31E5860080873D /* EmitterViewModel.swift */; };
 		C9CE942F2A9DCC320037BFFF /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE942E2A9DCC320037BFFF /* EmitterView.swift */; };
-		C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */; };
 		C9CE94332A9E057F0037BFFF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE94322A9E057F0037BFFF /* RootView.swift */; };
 		C9CE943D2A9E40200037BFFF /* lightweight_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9CE943C2A9E40200037BFFF /* lightweight_3.mp3 */; };
 		C9CE943F2A9E42410037BFFF /* lightweight_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9CE943E2A9E42410037BFFF /* lightweight_4.mp3 */; };
@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		C90400512A94374B00803EFE /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
+		C95AC3B52B3C68EC0035BB86 /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C95DC46B2A94663500649FF7 /* WorkoutNameEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNameEnum.swift; sourceTree = "<group>"; };
 		C95DC4702A948C5200649FF7 /* lightweight_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_2.mp3; sourceTree = "<group>"; };
 		C988622A2B31C5F50080873D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		C988623F2B31E2A90080873D /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		C98862422B31E5860080873D /* EmitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterViewModel.swift; sourceTree = "<group>"; };
 		C9CE942E2A9DCC320037BFFF /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
-		C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterManager.swift; sourceTree = "<group>"; };
 		C9CE94322A9E057F0037BFFF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C9CE943C2A9E40200037BFFF /* lightweight_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_3.mp3; sourceTree = "<group>"; };
 		C9CE943E2A9E42410037BFFF /* lightweight_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightweight_4.mp3; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 		C988623C2B31E1270080873D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C9CE94302A9DCC3D0037BFFF /* EmitterManager.swift */,
 				C9EE2EF82A90F1E000EE6557 /* CoreDataManager.swift */,
+				C95AC3B52B3C68EC0035BB86 /* EmitterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -354,11 +354,11 @@
 				C90400522A94374B00803EFE /* WorkoutRow.swift in Sources */,
 				C988622B2B31C5F50080873D /* RootViewModel.swift in Sources */,
 				C9EE2EF92A90F1E000EE6557 /* CoreDataManager.swift in Sources */,
-				C9CE94312A9DCC3D0037BFFF /* EmitterManager.swift in Sources */,
 				C98862402B31E2A90080873D /* CalculatorViewModel.swift in Sources */,
 				C98862352B31D8480080873D /* CrossFit+CoreDataClass.swift in Sources */,
 				C98862322B31CAD70080873D /* ContentViewModel.swift in Sources */,
 				C9EE2EF12A909D2800EE6557 /* HealthData.xcdatamodeld in Sources */,
+				C95AC3B62B3C68EC0035BB86 /* EmitterManager.swift in Sources */,
 				C9EE2EDE2A90925300EE6557 /* OneRMRecordAppApp.swift in Sources */,
 				C98862302B31C9F00080873D /* WeightToggleStyle.swift in Sources */,
 			);
